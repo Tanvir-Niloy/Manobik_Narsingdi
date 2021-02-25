@@ -40,9 +40,19 @@ app.use(express.static(Path.join(__dirname,'/public')))
 app.use('/(*_\\d+x\\d+.(jpeg?|png))', resizingMiddleware);
 
 
-    app.get('/', (req, res) => {
-        res.send('API is running....')
-    })
+  
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(Path.join(__dirname, '/client/build')))
+
+ app.get('*', (req,res) =>
+     res.set("Content-Security-Policy", "default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'").send(Path.resolve(__dirname, 'client', 'build','index.html'))
+
+ )
+} else {
+ app.get('/', (req,res) => {
+     res.send('API is running....')
+ })
+}
 
 
 // server init

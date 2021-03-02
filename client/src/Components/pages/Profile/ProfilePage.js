@@ -83,10 +83,10 @@ const ProfilePage = () => {
 
     return (
         <ProfilePageCSS>
-            <ImageModal open={open} imageLink='http://localhost:3000/uploads/noProfile_200x200.png' setOpen={setOpen}/>
+            <ImageModal open={open} imageLink='https://www.searchpng.com/wp-content/uploads/2019/02/Profile-ICon.png' setOpen={setOpen}/>
             <div className="wrapper" >
                 <div className="left">
-                    <img onClick={()=>{setOpen(true)}} src='http://localhost:3000/uploads/noProfile_200x200.png'
+                    <img onClick={()=>{setOpen(true)}} src='https://www.searchpng.com/wp-content/uploads/2019/02/Profile-ICon.png'
                          alt="user" width="100"/>
                         <h4>{data.name}
                         </h4>

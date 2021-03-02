@@ -35,9 +35,9 @@ const Sidebar = ({isOpen,toggle}) => {
             </Icon>
             <SidebarWrapper >
                 <SidebarMenu>
-                    <SidebarLink to='/'>Requests</SidebarLink>
-                    <SidebarLink to='/donors'>Donors</SidebarLink>
-                    <SidebarLink to='/request'>Request For a Blood</SidebarLink>
+                    <SidebarLink to='/'> রক্তের অনুরোধ তালিকা</SidebarLink>
+                    <SidebarLink to='/donors'>রক্ত দাতাদের তালিকা</SidebarLink>
+                    <SidebarLink to='/request'>রক্তের জন্য অনুরোধ করুন</SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap style={{marginRight:15}}>
                     {isAuthenticated ? (<NavBtnLinkDiv onClick={logMeOut}>Logout</NavBtnLinkDiv>) :

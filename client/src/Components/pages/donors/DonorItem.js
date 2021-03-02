@@ -9,9 +9,9 @@ const DonorItem = ({donor}) => {
             <CoverPhoto><Profile
                 src={getSizedImageURL(donor?.image,200,200)}/></CoverPhoto>
             <div className="profile-name">{donor.name}</div>
-            <p className="about">Upazila or Union:  {donor.district}</p>
+            <p className="about">উপজেলা অথবা ইউনিয়নের নাম:  {donor.district}</p>
             <Button>+880{donor.phone}</Button>
-            <Link to={`/user/${donor._id}`}><Button>More Info</Button> </Link>
+            <Link to={`/user/${donor._id}`}><Button>সম্পুর্ন তথ্য দেখুন</Button> </Link>
         </Container>
     );
 };

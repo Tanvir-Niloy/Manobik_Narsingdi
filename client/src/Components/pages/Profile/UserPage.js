@@ -40,10 +40,10 @@ const UserPage = () => {
                 </div>
                 <div className="right">
                     <div className="info">
-                        <h3>Information</h3>
+                        <h3>রক্ত দাতার তথ্য</h3>
                         <div className="info_data">
                             <div className="data">
-                                <h4>Phone</h4>
+                                <h4>মোবাইল নাম্বার</h4>
                                 <p>+880{data.phone}</p>
                             </div>
                         </div>
@@ -52,11 +52,11 @@ const UserPage = () => {
                     <div className="More Info">
                         <div className="projects_data">
                             <div className="data">
-                                <h4>Upazila Or Union Name</h4>
+                                <h4>উপজেলা অথবা ইউনিয়নের নাম</h4>
                                 <p>{data.district}</p>
                             </div>
                             <div className="data">
-                                <h4>User creation Date</h4>
+                                <h4>ব্যবহারকারী তৈরির তারিখ</h4>
                                 <p>{data.createdAt.slice(0,10)}</p>
                             </div>
                         </div>

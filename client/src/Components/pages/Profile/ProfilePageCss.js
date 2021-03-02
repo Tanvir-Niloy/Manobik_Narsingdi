@@ -79,11 +79,10 @@ export const ProfilePageCSS=styled.div`
   .wrapper .right .info h3,
   .wrapper .right .projects h3 {
     margin-bottom: 15px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #e0e0e0;
     color: #353c4e;
     text-transform: uppercase;
-    letter-spacing: 5px;
   }
 
   .wrapper .right .info_data,
@@ -127,7 +126,7 @@ export const ProfilePageCSS=styled.div`
     line-height: 45px;
     color: #353c4e;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
 
     &:hover {
       cursor: pointer;

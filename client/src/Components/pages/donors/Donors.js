@@ -42,13 +42,13 @@ const Donors = () => {
         <Container>
             <Row>
                 <Col lg={6} md={6} sm={12}>
-                    <SelectComponent options={bloodOptions} isMulti={false}  onChange={handleChangeForBlood} defaultLabel={"Search by blood type..."}/>
+                    <SelectComponent options={bloodOptions} isMulti={false}  onChange={handleChangeForBlood} defaultLabel={"রক্তের ধরণ অনুসারে খুঁজুন..."}/>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
-                    <SelectComponent options={districtOptions} isMulti={false}  onChange={handleChangeForDistrict} defaultLabel={"Upozila Or Union Name..."}/>
+                    <SelectComponent options={districtOptions} isMulti={false}  onChange={handleChangeForDistrict} defaultLabel={"উপজেলা বা ইউনিয়নের নাম অনুসারে খুঁজুন..."}/>
                 </Col>
             </Row>
-            <EmptyMessageBox message={"We don't have any people with your criteria. Why not save a life with your blood?"} toBeShown={data?.length===0}/>
+            <EmptyMessageBox message={"আপনার দেওয়া তথ্য অনুযায়ী কাউকে পাওয়া যায়নি.... আপনার রক্ত ​​দিয়ে অন্যের জীবন বাঁচান"} toBeShown={data?.length===0}/>
             <Row>
                 {data?.map((donor,index)=> {
                     if (data.length === index + 1) {

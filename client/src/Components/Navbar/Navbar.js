@@ -37,18 +37,14 @@ const Navbar = ({toggle}) => {
                 <Bars onClick={toggle}/>
                 <NavMenu>
                     <NavLink to='/' >
-                        Find Requests
+                    রক্তের অনুরোধ তালিকা
                     </NavLink>
-                    <NavLink to='/donors' activeStyle>
-                        Find donors
+                    <NavLink to='/donors' activeStyle>                        
+                    রক্ত দাতাদের তালিকা
                     </NavLink>
                     <NavLink to='/request' activeStyle>
-                        Request For Blood
+                    রক্তের জন্য অনুরোধ করুন
                     </NavLink>
-                    {/* <NavLink to='faq' activeStyle>
-                        FAQ
-                    </NavLink> */}
-                    {/* Second Nav */}
                 </NavMenu>
                 <NavBtn>
                     {isAuthenticated ? (<NavBtnLinkDiv onClick={logMeOut}>Logout</NavBtnLinkDiv>) :

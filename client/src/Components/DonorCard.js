@@ -12,15 +12,15 @@ const DonorCard = ({request,deleteRequest,donor}) => {
             <div className="content-container">
                 <p className="donor__title">{request.name}</p>
                 <p className="content">
-                    Upazila or Union: {request.district}
+                উপজেলা অথবা ইউনিয়নের নাম: {request.district}
                 </p>
                 <p className="content">
-                    {!donor?`Hospital Name:${request.hospitalName}`:`Phone Number:${request.phone}`}
+                    {!donor?`Hospital Name:${request.hospitalName}`:`মোবাইল নাম্বার :${request.phone}`}
 
                 </p>
             </div>
             <div className="content-container">
-                <p className="donor__title">Blood Type:{request.bloodType}</p>
+                <p className="donor__title">রক্তের ধরন:{request.bloodType}</p>
 
             </div>
             <div className="content-container">

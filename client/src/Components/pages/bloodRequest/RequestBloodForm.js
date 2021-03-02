@@ -61,7 +61,7 @@ function Contact() {
         return (
             <ContactWrapper>
             <ContactBox sent={submitted}><Recieved><FaHandshake style={{fontSize: '7em',marginTop:'200px'}}/>
-                <p>Your request has been accepted.</p></Recieved></ContactBox>
+                <p>আপনার আবেদনটি গ্রহণ করা হয়েছে</p></Recieved></ContactBox>
             </ContactWrapper>)
     }
     return (
@@ -80,46 +80,47 @@ function Contact() {
                             
                         </label>
                         <label className="label__name">
-                            <span>Patient Name</span>
+                            <span>রোগীর নাম</span>
                             <input
                                 onChange={handleInput}
                                 name="name"
                                 type="text"
                                 required
                                 value={values.name}
-                                placeholder="type Patient Name"
+                                placeholder="রোগীর নাম টাইপ করুন"
                             />
                         </label>
                         <label className="label__phone">
-                            <span>Phone</span>
+                            <span>মোবাইল নাম্বার</span>
                             <input
                                 onChange={handleInput}
                                 value={values.phone}
                                 name="phone"
                                 type="text"
                                 required
-                                placeholder="Enter Phone Number"
+                                placeholder="ফোন নম্বর টাইপ করুন"
                             />
                         </label>
                         <label className="label__district">
-                            <span>Hospital Name</span>
+                            <span>হাসপাতালের নাম</span>
                             <input
                                 onChange={handleInput}
                                 value={values.hospital}
                                 name="hospitalName"
                                 type="text"
                                 required
-                                placeholder="Provide Hospital Name"
+                                placeholder="
+                                হাসপাতালের নাম টাইপ করুন"
                             />
                         </label>
                         <label className="label__bloodType">
-                            <span>Choose your blood type...</span>
-                            <SelectComponent defaultLabel={"Choose your blood type"} options={bloodTypeOptions}
+                            <span>রক্তের ধরন...</span>
+                            <SelectComponent defaultLabel={"রক্তের ধরন নির্বাচন করুন"} options={bloodTypeOptions}
                                              styles={customStyles} onChange={handleChangeForBlood}/>
                         </label>
                         <label className="label__hospital">
-                            <span>Choose your Upazila Or Union...</span>
-                            <SelectComponent defaultLabel={"Choose your Upozila Or Union"} options={districtsOptions}
+                            <span>উপজেলা অথবা ইউনিয়নের নাম...</span>
+                            <SelectComponent defaultLabel={"উপজেলা অথবা ইউনিয়নের নাম নির্বাচন করুন "} options={districtsOptions}
                                              styles={customStyles} onChange={handleChangeForDistrict}/>
                         </label>
                         <label className="label__message">
@@ -132,8 +133,7 @@ function Contact() {
                                 placeholder="Describe the situation and Exact Address...."
                             />
                         </label>
-                        <ExpenseContainer><input type="checkbox" onChange={handleChangeForChecked}/><p>I confirm to pay
-                            for the travel expenses</p></ExpenseContainer>
+                        <ExpenseContainer><input type="checkbox" onChange={handleChangeForChecked}/><p>আপনি কি রক্ত দাতার যাতায়াত খরচ বহন করবেন ?</p></ExpenseContainer>
 
                         <Button
                             className="submit__btn"

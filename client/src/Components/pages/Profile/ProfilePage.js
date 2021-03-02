@@ -83,10 +83,10 @@ const ProfilePage = () => {
 
     return (
         <ProfilePageCSS>
-            <ImageModal open={open} imageLink='https://www.searchpng.com/wp-content/uploads/2019/02/Profile-ICon.png' setOpen={setOpen}/>
+            <ImageModal open={open} imageLink='https://cdn.iconscout.com/icon/free/png-256/account-avatar-profile-human-man-user-30448.png' setOpen={setOpen}/>
             <div className="wrapper" >
                 <div className="left">
-                    <img onClick={()=>{setOpen(true)}} src='https://www.searchpng.com/wp-content/uploads/2019/02/Profile-ICon.png'
+                    <img onClick={()=>{setOpen(true)}} src='https://cdn.iconscout.com/icon/free/png-256/account-avatar-profile-human-man-user-30448.png'
                          alt="user" width="100"/>
                         <h4>{data.name}
                         </h4>
@@ -94,16 +94,16 @@ const ProfilePage = () => {
                 </div>
                 <div className="right">
                     <div className="info">
-                        <h3>Information</h3>
+                        <h3>অনুরোধকারীর তথ্য</h3>
                         <div className="info_data">
                             <div className="data">
-                                <h4>Phone</h4>
+                                <h5>মোবাইল নাম্বার</h5>
                                 <p>+88{data.phone}</p>
                             </div>
                         </div>
                     </div>
                     <div className="More details">
-                        <h3>Message</h3>
+                        <h4>মেসেজ</h4>
                         <div className="data">
                             <p>{data.message}</p>
                         </div>
@@ -114,28 +114,28 @@ const ProfilePage = () => {
                     <div className="More Info">
                         <div className="projects_data">
                             <div className="data">
-                                <h4>Hospital Name</h4>
+                                <h5>হসপিটালের নাম</h5>
                                 <p>{data.hospitalName}</p>
                             </div>
                             <div className="data">
-                                <h4>Travel Cost</h4>
-                                <p>{data.travel?'Travel costs will be paid by requester':'Travel costs will not be paid by requester'}</p>
+                                <h5>যাতায়াত খরচ</h5>
+                                <p>{data.travel?'রক্তের জন্য আবেদনকারী যাতায়াত খরচ বহন করবেন':'রক্তের জন্য আবেদনকারী যাতায়াত খরচ বহন করবেন না'}</p>
                             </div>
                         </div>
                     </div>
                     <div className="More Info">
                         <div className="projects_data">
                             <div className="data">
-                                <h4>Upozila Or Union Name</h4>
+                                <h5>উপজেলা অথবা ইউনিয়নের নাম</h5>
                                 <p>{data.district}</p>
                             </div>
                             <div className="data">
-                                <h4>Date Requested</h4>
+                                <h5>আবেদনের তারিখ</h5>
                                 <p>{data.createdAt.slice(0,10)}</p>
                             </div>
                         </div>
                     </div>
-                        <div className={"offer-help-container"} onClick={onClick}><FaHandsHelping size={"3em"} style={{marginRight:10}}></FaHandsHelping> Offer A Help</div>
+                        <div className={"offer-help-container"} onClick={onClick}><FaHandsHelping size={"3em"} style={{marginRight:10}}></FaHandsHelping> সহায়তা পাঠান</div>
 
                 </div>
             </div>

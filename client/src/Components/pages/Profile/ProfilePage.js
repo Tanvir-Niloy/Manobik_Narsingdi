@@ -97,10 +97,6 @@ const ProfilePage = () => {
                         <h3>Information</h3>
                         <div className="info_data">
                             <div className="data">
-                                <h4>Email</h4>
-                                <p>{data.email}</p>
-                            </div>
-                            <div className="data">
                                 <h4>Phone</h4>
                                 <p>+88{data.phone}</p>
                             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {CardContainer,Flex} from "./RequestCardCSS";
 import {BloodType} from '../donors/DonorItemCSS'
-import {FaHospital,FaLocationArrow,FaMoneyBill,FaMailBulk} from "react-icons/all";
+import {FaHospital,FaLocationArrow,FaMoneyBill} from "react-icons/all";
 import {Link} from "react-router-dom";
 import {getSizedImageURL} from "../../sharedUtils/utils";
 
@@ -26,9 +26,9 @@ const RequestCard = ({donor,ref}) => {
                         <p className="card__description">
                             <FaMoneyBill/> They will  cover your travel and required expenses
                         </p>
-                        <p className="card__description">
+                        {/* <p className="card__description">
                             <FaMailBulk  style={{marginRight:10}}/>{donor.email}
-                        </p>
+                        </p> */}
 
 
 

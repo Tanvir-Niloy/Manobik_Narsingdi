@@ -7,7 +7,6 @@ import AuthContext from "../../Context/auth/authContext";
 import {FaLock} from "react-icons/all";
 import {FaPhone} from "react-icons/all";
 import {FaUser} from "react-icons/all";
-import {FaEnvelope} from "react-icons/all";
 const Signup = (props) => {
     const authContext=useContext(AuthContext);
     const {register,isAuthenticated}=authContext;
@@ -42,10 +41,7 @@ const Signup = (props) => {
                 <i><FaUser/></i>
                 <input id="name" name="name" autocomplete="off" type="text" placeholder="Full Name" value={valuesForSignup.name} onChange={handleChangeForSignup}/>
             </div>
-            <div className="input-field">
-                <i><FaEnvelope/></i>
-                <input name="email" autocomplete="off" type="email" placeholder="Email" value={valuesForSignup.email} onChange={handleChangeForSignup} />
-            </div>
+    
 
             <div className="input-field">
                 <i><FaLock/></i>

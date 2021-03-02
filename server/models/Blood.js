@@ -26,14 +26,6 @@ const BloodSchema = mongoose.Schema(
             type: String,
             maxlength: [13, 'Phone number can not be longer than 11 characters']
         },
-        email: {
-            type: String,
-            required: [true, 'please add an email'],
-            match: [
-                /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-                'Please add a valid email'
-            ],
-        },
         district:{
             type:String,
             required: [true, 'Please enter your district'],

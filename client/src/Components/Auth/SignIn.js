@@ -24,7 +24,7 @@ const SignIn = (props) => {
             <h2 className="title">Sign in</h2>
             <div className="input-field">
                 <i><FaUser/></i>
-                <input id="email" name="email" type="text" placeholder="Email" value={values.email} onChange={handleChangeForLogin} required/>
+                <input id="phone" name="phone" type="text" placeholder="Phone" value={values.phone} onChange={handleChangeForLogin} required/>
             </div>
             <div className="input-field">
                 <i><FaLock/></i>

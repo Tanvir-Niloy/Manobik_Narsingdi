@@ -9,7 +9,7 @@ const DonorItem = ({donor}) => {
             <CoverPhoto><Profile
                 src={getSizedImageURL(donor?.image,200,200)}/></CoverPhoto>
             <div className="profile-name">{donor.name}</div>
-            <p className="about">Upazila or Union:  {donor.district}<br/>Email:  {donor.email}</p>
+            <p className="about">Upazila or Union:  {donor.district}</p>
             <Button>+880{donor.phone}</Button>
             <Link to={`/user/${donor._id}`}><Button>More Info</Button> </Link>
         </Container>

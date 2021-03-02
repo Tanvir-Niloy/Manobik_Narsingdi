@@ -57,20 +57,16 @@ function Contact() {
             });
         }
     }
-    if (imageUploadStep) {
+    if (submitted) {
         return (
             <ContactWrapper>
-            <ContactBox sent={submitted}><Recieved><FaHandshake style={{fontSize: '7em'}}/>
+            <ContactBox sent={submitted}><Recieved><FaHandshake style={{fontSize: '7em',marginTop:'200px'}}/>
                 <p>Your request has been accepted.</p></Recieved></ContactBox>
             </ContactWrapper>)
     }
     return (
         <ContactWrapper>
             <ContactBox>
-                {submitted && (<Recieved>
-                    <PageHeader style={{fontSize:15}}>Add an image for your request</PageHeader>
-                    <UploadPhoto setSubmittedImage={setImageUploadStep} setSubmitted={setSubmitted} id={id}/> <Skip
-                    color={true} onClick={()=>{setImageUploadStep(true)}}>Skip adding image</Skip></Recieved>)}
                 {!submitted && (<LeftContent>
                     <FaSyringe style={{fontSize: '7em'}}/>
                     <p> “Never feel yourself weak, </p>
@@ -81,16 +77,7 @@ function Contact() {
                 {!submitted ? (
                     <ContactForm>
                         <label className="label__email">
-                            <span>Email</span>
-                            <input
-                                onChange={handleInput}
-                                value={values.email}
-                                id="email"
-                                name="email"
-                                type="email"
-                                required
-                                placeholder="example@gmail.com"
-                            />
+                            
                         </label>
                         <label className="label__name">
                             <span>Patient Name</span>

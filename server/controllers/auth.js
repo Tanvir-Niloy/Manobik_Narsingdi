@@ -9,7 +9,7 @@ const ObjectId=mongoose.ObjectId
 //@route POST /api/auth/register
 //@access Public
 export const register=asyncHandler(async (req, res, next)=>{
-    const {email}=req.body;
+    const {phone}=req.body;
     //Create user
     const user=await User.create(
         req.body
@@ -35,13 +35,13 @@ export const getMe=asyncHandler(async (req, res, next)=>{
 //@route POST /api/v1/auth/login
 //@access Public
 export const login=asyncHandler(async (req, res, next)=>{
-    const {email,password}=req.body;
-    //Validate email and password
-    if(!email||!password){
-        return next(new ErrorResponse(`Please provide user or a password`,400))
+    const {phone,password}=req.body;
+    //Validate phone and password
+    if(!phone||!password){
+        return next(new ErrorRespon+se(`Please provide user or a password`,400))
     }
     //check for a user
-    const user=await User.findOne({email}).select('+password');
+    const user=await User.findOne({phone}).select('+password');
     if(!user){
         return next(new ErrorResponse(`Please provide valid user or a password`,401))
     }

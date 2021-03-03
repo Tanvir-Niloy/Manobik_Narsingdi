@@ -3,12 +3,12 @@
           "name": "Manobik Narsingdi Blood Donate",
           "icons": [
             {
-              "src": "/client/public/blood192x192.png",
+              "src": "blood192x192.png",
               "type": "image/png",
               "sizes": "192x192"
             },
             {
-              "src": "/client/public/blood512x512.png",
+              "src": "blood192x192.png",
               "type": "image/png",
               "sizes": "512x512"
             }

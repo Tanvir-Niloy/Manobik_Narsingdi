@@ -1,6 +1,6 @@
 {
           "short_name": "Manobik Narsingdi",
-          "name": "Manobik Narsingdi Blood Donate",
+          "name": "Manobik Narsingdi",
           "icons": [
             {
               "src": "blood192x192.png",
@@ -8,7 +8,7 @@
               "sizes": "192x192"
             },
             {
-              "src": "blood192x192.png",
+              "src": "logo512x512.png",
               "type": "image/png",
               "sizes": "512x512"
             }

@@ -11,7 +11,7 @@ export const requestForDonor=  asyncHandler(async (req,res,next)=>{
     req.body.user=req.user.id;
     const user=User.findById(req.user.id)
     if(!user){
-        return next(new ErrorResponse(`You have to be logged in to make a request.`,401))
+        return next(new ErrorResponse(`রক্তের জন্য অনুরোধ করার জন্য আপনাকে লগ ইন করতে হবে`,401))
     }
 
     const request=await Blood.create(req.body)
@@ -72,6 +72,7 @@ export const getBloodRequest=asyncHandler(async (req,res,next)=>{
 //@desc upload photo for blood
 //@route PUT /api/v1/item/:id/photo
 //@access private
+
 export const patientPhoto=asyncHandler(async (req,res,next)=> {
     const blood=await Blood.findById(req.params.id);
     if(!blood){
@@ -88,7 +89,7 @@ export const patientPhoto=asyncHandler(async (req,res,next)=> {
         return next(new ErrorResponse(`Please upload an image file less than 2MB`,400))
     }
 
-    //create custom file name
+    
     file.name=`photo_${req.params.id}${path.parse(file.name).ext}`
     file.mv(`./public/uploads/${file.name}`, async err=>{
         if(err){

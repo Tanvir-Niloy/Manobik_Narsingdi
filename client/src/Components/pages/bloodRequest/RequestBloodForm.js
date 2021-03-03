@@ -69,9 +69,9 @@ function Contact() {
             <ContactBox>
                 {!submitted && (<LeftContent>
                     <FaSyringe style={{fontSize: '7em'}}/>
-                    <p> “Never feel yourself weak, </p>
-                    <p> you have the ability to save a life. </p>
-                    <p> Just donate blood.”</p>
+                    <p> “নিজেকে কখনই দুর্বল বোধ করবেন না, </p>
+                    <p> আপনি একটি জীবন বাঁচাতে পারেন  </p>
+                    <p> শুধু রক্ত ​​দান করুন”</p>
                 </LeftContent>)}
 
                 {!submitted ? (
@@ -130,7 +130,7 @@ function Contact() {
                                 value={values.message}
                                 name="message"
                                 required
-                                placeholder="Describe the situation and Exact Address...."
+                                placeholder="পরিস্থিতি এবং সঠিক ঠিকানা বর্ণনা করুন...."
                             />
                         </label>
                         <ExpenseContainer><input type="checkbox" onChange={handleChangeForChecked}/><p>আপনি কি রক্ত দাতার যাতায়াত খরচ বহন করবেন ?</p></ExpenseContainer>

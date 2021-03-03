@@ -10,7 +10,7 @@ export const errorHandler=(err,req,res,next)=>{
     }
     // Mongoose duplicate Key
     if(err.code===11000){
-        const message=`An account exists with that Number.`;
+        const message=`এই নম্বর দিয়ে একটি অ্যাকাউন্ট বিদ্যমান.`;
         error=new ErrorResponse(message,400);
     }
     if(err.name==='ValidationError'){

@@ -60,7 +60,7 @@ export const login=asyncHandler(async (req, res, next)=>{
 export const offerHelp=asyncHandler(async (req, res, next)=>{
     const user=await User.findById(req.user.id);
     if(!user){
-        return next(new ErrorResponse(`You must be logged in to offer help`,400))
+        return next(new ErrorResponse(`সহায়তা দেওয়ার জন্য আপনাকে অবশ্যই লগ ইন করতে হবে`,400))
     }
     let blood=await Blood.findById(req.params.id)
     if(!blood){
@@ -69,7 +69,7 @@ export const offerHelp=asyncHandler(async (req, res, next)=>{
     const {helpers}=blood
     for(const value of helpers){
         if(value==user._id.toHexString()){
-            return next(new ErrorResponse(`You have already offered your help.`,400))
+            return next(new ErrorResponse(`আপনি ইতিমধ্যে আপনার সাহায্যের প্রস্তাব দিয়েছেন`,400))
         }
     }
     blood=await Blood.findByIdAndUpdate(req.params.id,{ $push: { helpers: user._id } },{

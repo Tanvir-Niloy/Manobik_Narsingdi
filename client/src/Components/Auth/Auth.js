@@ -50,7 +50,7 @@ const Auth = (props) => {
                             “Donate blood and be a hero of someone’s life.”
                         </p>
                         <button className="btn transparent" onClick={onClick} id="sign-up-btn">
-                            Sign up
+                        নতুন একাউন্ট তৈরি করুন
                         </button>
                     </div>
                     <img src="https://freesvg.org/img/1533845191.png" className="image" alt="" />
@@ -62,7 +62,7 @@ const Auth = (props) => {
                             “Donate your blood for a reason, let the reason to be life”
                         </p>
                         <button className="btn transparent" onClick={onClick} id="sign-in-btn">
-                            Sign in
+                        লগইন করুন
                         </button>
                     </div>
                     <img src="https://freesvg.org/img/1533845191.png" className="image" alt="" />

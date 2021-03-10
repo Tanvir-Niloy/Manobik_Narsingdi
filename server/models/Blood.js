@@ -19,7 +19,6 @@ const BloodSchema = mongoose.Schema(
         },
         message: {
             type: String,
-            required: [true, 'Please add a description'],
             maxlength: [500, 'Description can not be more than 500 characters']
         },
         phone: {

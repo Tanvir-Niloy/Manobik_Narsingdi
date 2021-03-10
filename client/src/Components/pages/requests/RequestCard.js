@@ -16,7 +16,7 @@ const RequestCard = ({donor,ref}) => {
                     <p className="card__name">{donor.name}</p>
                     <Flex justify={"space-between"}>
                         <div className="grid-child-posts">
-                            <FaHospital/> {donor.hospitalName}
+                            <FaHospital style={{marginRight:10}}/>{donor.hospitalName?donor.hospitalName:' তথ্য দেওয়া হয়নি'}
                         </div>
                         <div className="grid-child-posts">
                             <FaLocationArrow/> {donor.district.charAt(0).toUpperCase() + donor.district.slice(1)}

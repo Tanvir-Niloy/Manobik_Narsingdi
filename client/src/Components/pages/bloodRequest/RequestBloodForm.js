@@ -11,16 +11,13 @@ import SelectComponent from "../../_shared/Query/SelectComponent";
 import {bloodType, districts, turnIntoSelectFormat} from "../../sharedUtils/sharedData";
 import axios from "axios";
 import {toast} from "react-toastify";
-import UploadPhoto from "../UploadPhoto";
-import PageHeader from "../../_shared/PageHeader";
-import {Skip} from "../../Navbar/Sidebar/SidebarCss";
+
 
 function Contact() {
     const bloodTypeOptions = turnIntoSelectFormat(bloodType)
     const districtsOptions = turnIntoSelectFormat(districts)
     const [submitted, setSubmitted] = useState(false)
     const [id, setId] = useState(null)
-    const [imageUploadStep, setImageUploadStep] = useState(false)
     const [values, handleInput, handleInputForSelect] = useForm();
     const handleChangeForBlood = selectedOption => {
         handleInputForSelect("bloodType", selectedOption.value)
@@ -102,7 +99,7 @@ function Contact() {
                             />
                         </label>
                         <label className="label__district">
-                            <span>হাসপাতালের নাম</span>
+                            <span>হাসপাতালের নাম ( optional )</span>
                             <input
                                 onChange={handleInput}
                                 value={values.hospital}
@@ -114,8 +111,8 @@ function Contact() {
                             />
                         </label>
                         <label className="label__bloodType">
-                            <span>রক্তের ধরন...</span>
-                            <SelectComponent defaultLabel={"রক্তের ধরন নির্বাচন করুন"} options={bloodTypeOptions}
+                            <span>রক্তের গ্রুপ...</span>
+                            <SelectComponent defaultLabel={"রক্তের গ্রুপ নির্বাচন করুন"} options={bloodTypeOptions}
                                              styles={customStyles} onChange={handleChangeForBlood}/>
                         </label>
                         <label className="label__hospital">
@@ -124,7 +121,7 @@ function Contact() {
                                              styles={customStyles} onChange={handleChangeForDistrict}/>
                         </label>
                         <label className="label__message">
-                            <span>Message</span>
+                            <span>Message ( optional )</span>
                             <textarea
                                 onChange={handleInput}
                                 value={values.message}
@@ -152,7 +149,7 @@ function Contact() {
 const customStyles = {
     control: (base, state) => ({
         ...base,
-        background: "#0C1A34",
+        background: "#fff",
         color: state.isSelected ? 'red' : 'blue',
         margin: "10px 0",
         height: "100%",
@@ -175,7 +172,7 @@ const customStyles = {
     }),
     input: base => ({
         ...base,
-        color: "#ff0000"
+        color: "#fff"
     }),
 };
 export default Contact;

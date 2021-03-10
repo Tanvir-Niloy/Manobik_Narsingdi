@@ -35,13 +35,13 @@ const Sidebar = ({isOpen,toggle}) => {
             </Icon>
             <SidebarWrapper >
                 <SidebarMenu>
-                    <SidebarLink to='/'> রক্তের অনুরোধ তালিকা</SidebarLink>
+                    <SidebarLink to='/'> রক্তের আবেদন তালিকা</SidebarLink>
                     <SidebarLink to='/donors'>রক্ত দাতাদের তালিকা</SidebarLink>
-                    <SidebarLink to='/request'>রক্তের জন্য অনুরোধ করুন</SidebarLink>
+                    <SidebarLink to='/request'>রক্তের জন্য আবেদন করুন</SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap style={{marginRight:15}}>
                     {isAuthenticated ? (<NavBtnLinkDiv onClick={logMeOut}>Logout</NavBtnLinkDiv>) :
-                        (<NavBtnLink to='/login'><FaUser style={{marginRight:10}} />Sign In / Signup</NavBtnLink>)}
+                        (<NavBtnLink to='/login'><FaUser style={{marginRight:10}} />লগইন করুন / নতুন একাউন্ট তৈরি করুন</NavBtnLink>)}
                     {isAuthenticated&&<NavBtnLink to='/requests' margin={true} >My Requests</NavBtnLink>}
 
                 </SideBtnWrap>

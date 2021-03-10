@@ -21,7 +21,7 @@ const SignIn = (props) => {
 
     return (
         <form  className="sign-in-form" onSubmit={onLogin}>
-            <h2 className="title">Sign in</h2>
+            <h2 className="title">লগইন করুন</h2>
             <div className="input-field">
                 <i><FaUser/></i>
                 <input id="phone" name="phone" type="text" placeholder="Phone" value={values.phone} onChange={handleChangeForLogin} required/>

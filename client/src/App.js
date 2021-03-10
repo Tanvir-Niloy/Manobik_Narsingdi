@@ -34,6 +34,7 @@ function App() {
     useEffect(()=>{
         loadUser()
     },[])//fires load user everytime the page reloads
+    
     return (
         <QueryClientProvider client={queryClient}>
             <div className="App">

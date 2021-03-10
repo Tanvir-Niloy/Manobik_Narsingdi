@@ -20,7 +20,7 @@ const DonorCard = ({request,deleteRequest,donor}) => {
                 </p>
             </div>
             <div className="content-container">
-                <p className="donor__title">রক্তের ধরন:{request.bloodType}</p>
+                <p className="donor__title">রক্তের গ্রুপ:{request.bloodType}</p>
 
             </div>
             <div className="content-container">

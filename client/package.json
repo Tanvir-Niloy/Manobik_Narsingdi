@@ -2,12 +2,8 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": {
-    "/api": {
-      "target": "http://127.0.0.1:6868",
-      "secure": false
-    }
-  },
+  "proxy": "http://127.0.0.1:6868",
+  
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",

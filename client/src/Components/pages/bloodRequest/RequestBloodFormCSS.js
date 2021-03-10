@@ -129,8 +129,9 @@ export const ContactForm = styled.form`
   textarea {
     padding: 10px 15px;
     border-radius: 5px;
-    background-color: #0c1a34;
+    background-color: #fff;
     border: none;
+    color:#000;
     margin: 10px 0;
     width: 90%;
   }

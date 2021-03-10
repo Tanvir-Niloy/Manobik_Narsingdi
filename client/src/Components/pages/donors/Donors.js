@@ -21,7 +21,6 @@ const Donors = () => {
         data,
         hasMore,
         loading,
-        error
     } = useInfiniteQuery( pageNumber,district,blood,"donors")
     useEffect(()=>{
         if(isVisible && hasMore){
@@ -40,16 +39,16 @@ const Donors = () => {
     };
     return (
         <Container>
-            <Row>
+            <Row style={{marginTop:40}}>
                 <Col lg={6} md={6} sm={12}>
-                    <SelectComponent options={bloodOptions} isMulti={false}  onChange={handleChangeForBlood} defaultLabel={"রক্তের ধরণ অনুসারে খুঁজুন..."}/>
+                    <SelectComponent options={bloodOptions} isMulti={false}  onChange={handleChangeForBlood} defaultLabel={"রক্তের গ্রুপ অনুসারে খুঁজুন...."}/>
                 </Col>
                 <Col lg={6} md={6} sm={12}>
                     <SelectComponent options={districtOptions} isMulti={false}  onChange={handleChangeForDistrict} defaultLabel={"উপজেলা বা ইউনিয়নের নাম অনুসারে খুঁজুন..."}/>
                 </Col>
             </Row>
             <EmptyMessageBox message={"আপনার দেওয়া তথ্য অনুযায়ী কাউকে পাওয়া যায়নি.... আপনার রক্ত ​​দিয়ে অন্যের জীবন বাঁচান"} toBeShown={data?.length===0}/>
-            <Row>
+            <Row style={{marginTop:40}}>
                 {data?.map((donor,index)=> {
                     if (data.length === index + 1) {
                         return <Col lg={4} md={6} sm={12} ref={ref}><DonorItem donor={donor}  /><div ref={ref}></div></Col>

@@ -12,7 +12,7 @@ box-shadow: 5px 5px 19px 1px rgba(0,0,0,0.35);
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
   font-family: 'SolaimanLipi', sans-serif;
-
+   
   /* Third Nav */
   /* justify-content: flex-start; */
 `;

@@ -32,7 +32,7 @@ const Signup = (props) => {
 
     return (
         <form autocomplete="off" className="sign-up-form" onSubmit={onRegister} >
-            <h2 className="title">Sign up</h2>
+            <h2 className="title">নতুন একাউন্ট তৈরি করুন</h2>
             <div className="input-field">
                 <i><FaPhone/></i>
                 <input id="phone" name="phone" type="phone" placeholder="Phone Number" autocomplete="off" value={valuesForSignup.phone} onChange={handleChangeForSignup}/>
@@ -49,9 +49,9 @@ const Signup = (props) => {
             </div>
 
             <div className="queryBox">
-                <QueryContainer>
-                <SelectComponent options={bloodOptions} isMulti={false}  onChange={handleChangeForBlood} defaultLabel={"Choose your blood type"}/>
-                <SelectComponent options={districtOptions} isMulti={false}  onChange={handleChangeForDistrict} defaultLabel={"Choose  Upozila Or Union"}/>
+                <QueryContainer >
+                <SelectComponent options={bloodOptions} isMulti={false}  onChange={handleChangeForBlood} defaultLabel={"রক্তের গ্রুপ নির্বাচন করুন"}/>
+                <SelectComponent  options={districtOptions} isMulti={false}  onChange={handleChangeForDistrict} defaultLabel={"উপজেলা অথবা ইউনিয়নের নাম নির্বাচন করুন"}/>
                 </QueryContainer>
 
             </div>

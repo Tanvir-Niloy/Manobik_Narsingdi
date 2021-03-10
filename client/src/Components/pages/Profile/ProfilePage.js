@@ -8,7 +8,6 @@ import {CentralizeDiv} from "../../_shared/CentralizeDiv";
 import {toast} from "react-toastify";
 import {FaHandsHelping} from "react-icons/all";
 import AuthContext from "../../../Context/auth/authContext";
-import {getSizedImageURL} from "../../sharedUtils/utils";
 import 'react-medium-image-zoom/dist/styles.css'
 import ImageModal from "../../_shared/ImageModal";
 
@@ -105,7 +104,7 @@ const ProfilePage = () => {
                     <div className="More details">
                         <h4>মেসেজ</h4>
                         <div className="data">
-                            <p>{data.message}</p>
+                        <p>{data.message?data.message:'তথ্য দেওয়া হয়নি'}</p>
                         </div>
                         <div className="projects_data">
 
@@ -115,7 +114,7 @@ const ProfilePage = () => {
                         <div className="projects_data">
                             <div className="data">
                                 <h5>হসপিটালের নাম</h5>
-                                <p>{data.hospitalName}</p>
+                                <p>{data.hospitalName?data.hospitalName:'তথ্য দেওয়া হয়নি'}</p>
                             </div>
                             <div className="data">
                                 <h5>যাতায়াত খরচ</h5>

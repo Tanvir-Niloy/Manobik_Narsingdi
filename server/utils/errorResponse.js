@@ -3,5 +3,7 @@ class ErrorResponse extends Error{
         super(message);
         this.statusCode=statusCode
     }
+
+    
 }
 export default ErrorResponse
